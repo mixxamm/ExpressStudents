@@ -9,9 +9,10 @@
     <ul>
         <% students.forEach(function(student){ %>
         <li><span><b>Naam: </b><%= student.naam %></span></li>
-        <li><span><b>Geboortedatum: </b><%= student.geboortedatum.toLocaleDateString() %></span></li>
+        <li><span><b>Geboortedatum: </b><%= student.geboortedatum %></span></li>
         <li><span><b>Studierichting: </b><%= student.studierichting %></span></li>
         <% }) %>
     </ul>
+    <a href="/student/add">Toeveoegen</a>
 </body>
 </html>
