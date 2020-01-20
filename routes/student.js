@@ -9,7 +9,7 @@ MongoClient.connect('mongodb://localhost:27017', (err, database) => {
 
 
 router.get('/', (req, res) => {
-  db.collection("students").find().toArray((err, response) => res.render('lijst', {students: response}))
+  db.collection("students").find().sort({naam: 1}).toArray((err, response) => res.render('lijst', {students: response}))
 });
 
 router.get('/add', (req, res) => {
